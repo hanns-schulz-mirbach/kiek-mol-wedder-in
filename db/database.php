@@ -46,11 +46,21 @@ class Database
 
     public function __construct ()
     {
-        $this->dbHost = '127.0.0.1';          // $_SERVER['RDS_HOSTNAME']; // For AWS deployment
-        $this->dbName = 'kiekmolwedderin';    // $_SERVER['RDS_DB_NAME'];  // For AWS deployment
-        $this->dbUser = 'hanns';              // $_SERVER['RDS_USERNAME']; // For AWS deployment
-        $this->dbPassword = 'hanns';          // $_SERVER['RDS_PASSWORD']; // For AWS deployment
-        $this->dbPort = 3306;                 // $_SERVER['RDS_PORT'];     // For AWS deployment
+        /*
+         * // Local deployment
+         * $this->dbHost = '127.0.0.1';
+         * $this->dbName = 'kiekmolwedderin';
+         * $this->dbUser = 'hanns';
+         * $this->dbPassword = 'hanns';
+         * $this->dbPort = 3306;
+         */
+        
+        // AWS deployment
+        $this->dbHost = $_SERVER['RDS_HOSTNAME'];
+        $this->dbName = $_SERVER['RDS_DB_NAME'];
+        $this->dbUser = $_SERVER['RDS_USERNAME'];
+        $this->dbPassword = $_SERVER['RDS_PASSWORD'];
+        $this->dbPort = $_SERVER['RDS_PORT'];
         
         $this->mySQLDatabase = new mysqli($this->dbHost, $this->dbUser,
                 $this->dbPassword, $this->dbName, $this->dbPort);
