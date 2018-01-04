@@ -1,0 +1,102 @@
+body {
+	background-color: white;
+}
+
+header {
+	background-color: lavender;
+	text-align: center;
+	padding: 2% 0%;
+	font-family: "Comic Sans MS", cursive;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+nav {
+	background-color: lavenderblush;
+	padding: 1% 2% 1% 2%;
+}
+
+#workarea {
+	background-color: ivory;
+	display: flex;
+	flex-direction: row;
+}
+
+.sidebar-display-area {
+	padding: 1em 2% 2% 2%;
+	border-right: 1px solid black;
+	background-color: ivory;
+}
+
+.central-display-area {
+	padding: 1em 2% 2% 2%;
+	width: auto;
+	position: relative;
+}
+
+.submit-reset {
+	padding: 1em;
+}
+
+.login-info {
+	float: right;
+}
+
+footer {
+	background-color: lavender;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+input.date-input {
+	width: 10em !important; 
+}
+
+th {
+	padding: 5px;
+	font-size: 80%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	text-align: left;
+}
+
+tr:nth-child(even) {
+	background: lightgray;
+}
+
+td:nth-child(1) {
+	font-weight: bold;
+}
+
+td {
+	padding: 5px;
+}
+
+tr:hover {
+	background: darkblue;
+	color: white;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+form input[type="text"] {
+	width: 20em;
+}
+
+form input[type="email"] {
+	width: 20em;
+}
+
+form input[type="password"] {
+	width: 20em;
+}
+

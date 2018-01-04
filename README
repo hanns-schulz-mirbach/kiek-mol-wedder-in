@@ -1,0 +1,20 @@
+                               README
+                       Version 1, 03 January 2018
+
+ Copyright (C) 2018 Hanns Schulz-Mirbach <http://www.schulz-mirbach.com/>
+ 
+                            Purpose of the application
+
+The KiekMolWedderIn web application suports the planning and execution of chess tournaments. 
+The main features are
+- Master data administration for tournaments, rounds, players
+- Planning of tournament rounds and games
+- Documentation of game results
+- Authoring and publication of game reports
+- Automatic calculation of player ranking
+
+                            Installation instructions and copyright
+
+Installation instructions: in this source package under installation/InstallationInstruction
+
+Copyright and license information: in this source package under COPYING

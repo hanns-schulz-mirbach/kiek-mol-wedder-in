@@ -1,0 +1,72 @@
+                        Installation instructions
+                       Version 1, 03 January 2018
+
+ Copyright (C) 2018 Hanns Schulz-Mirbach <http://www.schulz-mirbach.com/>
+ 
+                            Prerequisites
+
+The KiekMolWedderIn tournamnent web application has been developed and tested with
+- PHP 7.1.9
+- MySQL 5.7.19
+- Apache httpd 2.4.27
+- Mozilla Firefox 57.0.3 (64 Bit)
+- Internet Explorer 11.0.9600.18837
+- Windows 7 Enterprise Edition 64 bit (all aforemnetioned applications running on one box)
+
+The application should work on any LAMP stack with PHP 7. 
+
+
+                            Unpacking the files
+
+Create a new directory on your web server (we call this the ROOT_DIR in the following). Unpack under 
+ROOT_DIR the files and sub-directories of the application. Ensure that the UTF-8 encoding of the files is 
+not preserved. 
+
+
+                            Preparing the database
+
+You need to get access to an empty MySQL database schema with the permission to create new database tables. 
+Connect with a MySQL client (e.g. MySQL Workbench or MySQL command line) to the empty database and execute
+the scripts (*.sql) located under ROOT_DIR/installation/database_scripts. It does not matter in which sequence 
+you apply the database scripts.
+
+
+                            Configurimg the database connection
+Open with a text editor the file ROOT_DIR/db/database.php and replace in lines 49 - 53 the entries for 
+dbHost (IP address or host name of your database server), dbName (name of your database schema), 
+dbUser (user to connect to the database), dbPassword (password for your database), dbPort (port of your database) 
+with the data for your database
+
+        $this->dbHost = '127.0.0.1';
+        $this->dbName = 'kiekmolwedderin';
+        $this->dbUser = 'hanns';
+        $this->dbPassword = 'hanns';
+        $this->dbPort = 3306;
+
+In a hosting environment you will get the aforementioned data from your hosting provider. 
+Be sure to keep the single quotes ' ' for the first four entries and save the file with UTF-8 encoding. 
+
+
+                            Preparing the web server
+Register ROOT_DIR with your web server as the default directory for the application and the file 
+ROOT_DIR/index.php as the default file. Start the web server so that you can access the application with 
+a Web browser. 
+
+
+                            Creating the initial user account
+It is assumed that your web server is running and that you can reach the KiekMolWedderIn web application 
+via BASE_URL/index.php (the value of BASE_URL depends on the configuration of your web server).
+Enter the URL BASE_URL/player_create_initial.php into your browser. Fill in all data in the player 
+registration form and ensure to select Administrator for the player role. After saving you can log in 
+with the new user account. Please note that the access via BASE_URL/player_create_initial.php will 
+only work for an empty database. You can now log in with the new user account; the online help gives you 
+further instructions how to use the application. 
+ 
+
+
+
+
+
+
+
+
