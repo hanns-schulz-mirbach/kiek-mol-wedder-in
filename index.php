@@ -72,7 +72,7 @@ if (! empty($top3Reports)) {
     foreach ($top3Reports as $report) {
         $reportAuthor = $report->getReportAuthor()->getFirstname() . " " .
                  $report->getReportAuthor()->getLastname();
-        $publicationDate = $report->getPublicationDate()->format('m.d.Y');
+        $publicationDate = $report->getPublicationDate()->format('d.m.Y');
         $reportText = $report->getReportText();
         $reportTextDecoded = html_entity_decode($reportText,
                 ENT_QUOTES | ENT_XML1, 'UTF-8');

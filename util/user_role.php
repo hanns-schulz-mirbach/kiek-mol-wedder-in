@@ -32,6 +32,10 @@ class UserRole
     public function setUserRoleDescription (string $userRole): void
     {
         $this->userRoleDescription = trim($userRole);
+        
+        if (! $this->isRoleValid()) {
+            $this->userRoleDescription = "Anonymous";
+        }
     }
 
     public function __construct ()

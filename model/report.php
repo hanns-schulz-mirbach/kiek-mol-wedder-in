@@ -203,7 +203,7 @@ class Report
     {
         $reportText = $this->report_text;
         $reportTextDisplay = html_entity_decode($reportText,
-                ENT_QUOTES | ENT_XML1, 'UTF-8');
+                ENT_QUOTES | ENT_XML1, "UTF-8");
         return $reportTextDisplay;
     }
 
@@ -239,12 +239,12 @@ class Report
 
     public function setReportTitle (string $reportTitle): void
     {
-        $this->report_title = htmlentities($reportTitle, ENT_QUOTES);
+        $this->report_title = htmlentities($reportTitle, ENT_QUOTES, "UTF-8");
     }
 
     public function setReportText (string $reportText): void
     {
-        $this->report_text = htmlentities($reportText, ENT_QUOTES);
+        $this->report_text = htmlentities($reportText, ENT_QUOTES, "UTF-8");
     }
 
     public function setPublicationDate (DateTime $publicationDate): void
