@@ -29,7 +29,7 @@ if ($accessController->access_PlayerOverview()) {
     echo ("<a href='player_overview_readonly.php'>Spieler</a> <br />");
 }
 
-if ($accessController->access_RoundOverviewAllCurrentTournament()) {
+if ($accessController->access_RoundOverviewCurrentTournament()) {
     echo ("<a href='round_overview_current_tournament.php'>Rundenplan</a> <br />");
 }
 
